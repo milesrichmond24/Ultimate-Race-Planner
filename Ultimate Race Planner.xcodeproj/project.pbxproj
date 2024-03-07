@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CC1436412B96254C0039F27A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1436402B96254C0039F27A /* AppDelegate.swift */; };
 		CC1436432B96254C0039F27A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1436422B96254C0039F27A /* SceneDelegate.swift */; };
-		CC1436452B96254C0039F27A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1436442B96254C0039F27A /* ViewController.swift */; };
+		CC1436452B96254C0039F27A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1436442B96254C0039F27A /* HomeViewController.swift */; };
 		CC1436482B96254C0039F27A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC1436462B96254C0039F27A /* Main.storyboard */; };
 		CC14364B2B96254C0039F27A /* Ultimate_Race_Planner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC1436492B96254C0039F27A /* Ultimate_Race_Planner.xcdatamodeld */; };
 		CC14364D2B96254D0039F27A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC14364C2B96254D0039F27A /* Assets.xcassets */; };
@@ -41,7 +41,7 @@
 		CC14363D2B96254C0039F27A /* Ultimate Race Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ultimate Race Planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1436402B96254C0039F27A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC1436422B96254C0039F27A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CC1436442B96254C0039F27A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CC1436442B96254C0039F27A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		CC1436472B96254C0039F27A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC14364A2B96254C0039F27A /* Ultimate_Race_Planner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ultimate_Race_Planner.xcdatamodel; sourceTree = "<group>"; };
 		CC14364C2B96254D0039F27A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 			children = (
 				CC1436402B96254C0039F27A /* AppDelegate.swift */,
 				CC1436422B96254C0039F27A /* SceneDelegate.swift */,
-				CC1436442B96254C0039F27A /* ViewController.swift */,
+				CC1436442B96254C0039F27A /* HomeViewController.swift */,
 				CC1436462B96254C0039F27A /* Main.storyboard */,
 				CC1436732B9625B80039F27A /* race.swift */,
 				CC14364C2B96254D0039F27A /* Assets.xcassets */,
@@ -266,7 +266,7 @@
 			files = (
 				CC1436742B9625B80039F27A /* race.swift in Sources */,
 				CC14364B2B96254C0039F27A /* Ultimate_Race_Planner.xcdatamodeld in Sources */,
-				CC1436452B96254C0039F27A /* ViewController.swift in Sources */,
+				CC1436452B96254C0039F27A /* HomeViewController.swift in Sources */,
 				CC1436412B96254C0039F27A /* AppDelegate.swift in Sources */,
 				CC1436432B96254C0039F27A /* SceneDelegate.swift in Sources */,
 			);
