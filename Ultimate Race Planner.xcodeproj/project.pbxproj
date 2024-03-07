@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		CC14365B2B96254E0039F27A /* Ultimate_Race_PlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC14365A2B96254E0039F27A /* Ultimate_Race_PlannerTests.swift */; };
 		CC1436652B96254E0039F27A /* Ultimate_Race_PlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1436642B96254E0039F27A /* Ultimate_Race_PlannerUITests.swift */; };
 		CC1436672B96254E0039F27A /* Ultimate_Race_PlannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1436662B96254E0039F27A /* Ultimate_Race_PlannerUITestsLaunchTests.swift */; };
+		CC1436742B9625B80039F27A /* race.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1436732B9625B80039F27A /* race.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CC1436602B96254E0039F27A /* Ultimate Race PlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ultimate Race PlannerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1436642B96254E0039F27A /* Ultimate_Race_PlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ultimate_Race_PlannerUITests.swift; sourceTree = "<group>"; };
 		CC1436662B96254E0039F27A /* Ultimate_Race_PlannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ultimate_Race_PlannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CC1436732B9625B80039F27A /* race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = race.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				CC1436422B96254C0039F27A /* SceneDelegate.swift */,
 				CC1436442B96254C0039F27A /* ViewController.swift */,
 				CC1436462B96254C0039F27A /* Main.storyboard */,
+				CC1436732B9625B80039F27A /* race.swift */,
 				CC14364C2B96254D0039F27A /* Assets.xcassets */,
 				CC14364E2B96254D0039F27A /* LaunchScreen.storyboard */,
 				CC1436512B96254D0039F27A /* Info.plist */,
@@ -210,7 +213,7 @@
 				};
 			};
 			buildConfigurationList = CC1436382B96254C0039F27A /* Build configuration list for PBXProject "Ultimate Race Planner" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC1436742B9625B80039F27A /* race.swift in Sources */,
 				CC14364B2B96254C0039F27A /* Ultimate_Race_Planner.xcdatamodeld in Sources */,
 				CC1436452B96254C0039F27A /* ViewController.swift in Sources */,
 				CC1436412B96254C0039F27A /* AppDelegate.swift in Sources */,
@@ -452,8 +456,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,8 +484,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
