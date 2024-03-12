@@ -7,22 +7,36 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
-
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var planTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        var race1 = Race(length: 1600, units: UnitLength.meters)
+        print(AppData.plans)
         
-        race1.addSegment(length: 400, duration: 60)
         
-        race1.setSegmentNote(segment: 0, "Cheesecake")
-        race1.setSegmentNote(segment: 3, "Thnis")
-        
-        print(race1)
+        planTable.delegate = self
+        planTable.dataSource = self
+        planTable.reloadData()
     }
-
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        planTable.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return AppData.plans.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "plan", for: indexPath) as! PlanCel
+        print(AppData.plans.count)
+    
+        return cell
+    }
+    
+    @IBAction func test(_ sender: Any) {
+        planTable.reloadData()
+    }
 }
-
