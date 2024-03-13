@@ -35,6 +35,7 @@ class AddPlanViewController: UIViewController {
         }
         
         var plan: Race = Race(length: distance, units: UnitLength.meters)
+        plan.name = name
         plan.notes = notes
         
         AppData.plans.append(plan)

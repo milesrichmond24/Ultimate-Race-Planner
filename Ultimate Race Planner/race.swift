@@ -8,6 +8,7 @@
 import Foundation
 
 struct Race {
+    var name: String
     var length: Float
     var units: UnitLength
     var splits: [Segment] = []

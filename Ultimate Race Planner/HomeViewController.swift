@@ -32,7 +32,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "plan", for: indexPath) as! PlanCel
-        print(AppData.plans.count)
+        cell.distance.text = "\(AppData.plans[indexPath.row].length) \(AppData.plans[indexPath.row].units)"
+        cell.name.text = "\(AppData.plans[indexPath.row].name)"
+        cell.splitCount.text = "\(AppData.plans[indexPath.row].splits.count) Splits"
     
         return cell
     }
