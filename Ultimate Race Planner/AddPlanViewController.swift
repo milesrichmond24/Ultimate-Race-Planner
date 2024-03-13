@@ -8,6 +8,7 @@
 import UIKit
 
 class AddPlanViewController: UIViewController {
+    var delegate: HomeViewController!
     var name: String!
     var distance: Float!
     var notes: String!
@@ -22,6 +23,11 @@ class AddPlanViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        delegate.planTable.reloadData()
+    }
+    
     
     @IBAction func addPlan(_ sender: UIButton) {
         if(!isValid) {

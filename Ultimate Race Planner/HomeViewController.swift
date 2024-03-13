@@ -21,8 +21,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         planTable.reloadData()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         planTable.reloadData()
+        print("called")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,7 +37,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    @IBAction func test(_ sender: Any) {
-        planTable.reloadData()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? AddPlanViewController else {
+            return
+        }
+        
+        destination.delegate = self
     }
 }
