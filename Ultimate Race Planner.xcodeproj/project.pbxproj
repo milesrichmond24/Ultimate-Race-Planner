@@ -23,6 +23,7 @@
 		CCF53B7E2BA098E100935BDA /* AddPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF53B7D2BA098E100935BDA /* AddPlanViewController.swift */; };
 		CCF53B802BA09BC000935BDA /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF53B7F2BA09BC000935BDA /* AppData.swift */; };
 		CCF53B842BA09E4200935BDA /* planCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF53B832BA09E4200935BDA /* planCell.swift */; };
+		CCFD6F8A2BA3416F008F28D8 /* StopwatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFD6F892BA3416F008F28D8 /* StopwatchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		CCF53B7D2BA098E100935BDA /* AddPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlanViewController.swift; sourceTree = "<group>"; };
 		CCF53B7F2BA09BC000935BDA /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		CCF53B832BA09E4200935BDA /* planCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = planCell.swift; sourceTree = "<group>"; };
+		CCFD6F892BA3416F008F28D8 /* StopwatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		CC14363F2B96254C0039F27A /* Ultimate Race Planner */ = {
 			isa = PBXGroup;
 			children = (
+				CCFD6F892BA3416F008F28D8 /* StopwatchViewController.swift */,
 				CC1436402B96254C0039F27A /* AppDelegate.swift */,
 				CC1436422B96254C0039F27A /* SceneDelegate.swift */,
 				CC1436442B96254C0039F27A /* HomeViewController.swift */,
@@ -289,6 +292,7 @@
 				CC1436432B96254C0039F27A /* SceneDelegate.swift in Sources */,
 				CCF53B7E2BA098E100935BDA /* AddPlanViewController.swift in Sources */,
 				CCF53B802BA09BC000935BDA /* AppData.swift in Sources */,
+				CCFD6F8A2BA3416F008F28D8 /* StopwatchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
