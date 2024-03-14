@@ -12,9 +12,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(AppData.plans)
-        
+        AppData.getData()
         
         planTable.delegate = self
         planTable.dataSource = self
@@ -23,7 +21,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidAppear(_ animated: Bool) {
         planTable.reloadData()
-        print("called")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,11 +29,24 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "plan", for: indexPath) as! PlanCel
-        cell.distance.text = "\(AppData.plans[indexPath.row].length) \(AppData.plans[indexPath.row].units)"
+        cell.distance.text = "\(AppData.plans[indexPath.row].length) m"
         cell.name.text = "\(AppData.plans[indexPath.row].name)"
         cell.splitCount.text = "\(AppData.plans[indexPath.row].splits.count) Splits"
     
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        AppData.selectedPlan = indexPath.row
+        performSegue(withIdentifier: "viewPlan", sender: self)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if(editingStyle == .delete) {
+            AppData.plans.remove(at: indexPath.row)
+            AppData.saveData()
+            planTable.reloadData()
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

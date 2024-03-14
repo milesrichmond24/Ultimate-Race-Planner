@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B195DF0B2BA27686001CB8DF /* ViewPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B195DF0A2BA27686001CB8DF /* ViewPlanViewController.swift */; };
+		B195DF0D2BA27801001CB8DF /* SplitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B195DF0C2BA27801001CB8DF /* SplitCell.swift */; };
 		CC1436412B96254C0039F27A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1436402B96254C0039F27A /* AppDelegate.swift */; };
 		CC1436432B96254C0039F27A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1436422B96254C0039F27A /* SceneDelegate.swift */; };
 		CC1436452B96254C0039F27A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1436442B96254C0039F27A /* HomeViewController.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B195DF0A2BA27686001CB8DF /* ViewPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPlanViewController.swift; sourceTree = "<group>"; };
+		B195DF0C2BA27801001CB8DF /* SplitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitCell.swift; sourceTree = "<group>"; };
 		CC14363D2B96254C0039F27A /* Ultimate Race Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ultimate Race Planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1436402B96254C0039F27A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC1436422B96254C0039F27A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 				CC1436402B96254C0039F27A /* AppDelegate.swift */,
 				CC1436422B96254C0039F27A /* SceneDelegate.swift */,
 				CC1436442B96254C0039F27A /* HomeViewController.swift */,
+				B195DF0A2BA27686001CB8DF /* ViewPlanViewController.swift */,
+				B195DF0C2BA27801001CB8DF /* SplitCell.swift */,
 				CCF53B7D2BA098E100935BDA /* AddPlanViewController.swift */,
 				CCF53B832BA09E4200935BDA /* planCell.swift */,
 				CCF53B7F2BA09BC000935BDA /* AppData.swift */,
@@ -277,7 +283,9 @@
 				CC14364B2B96254C0039F27A /* Ultimate_Race_Planner.xcdatamodeld in Sources */,
 				CC1436452B96254C0039F27A /* HomeViewController.swift in Sources */,
 				CC1436412B96254C0039F27A /* AppDelegate.swift in Sources */,
+				B195DF0D2BA27801001CB8DF /* SplitCell.swift in Sources */,
 				CCF53B842BA09E4200935BDA /* planCell.swift in Sources */,
+				B195DF0B2BA27686001CB8DF /* ViewPlanViewController.swift in Sources */,
 				CC1436432B96254C0039F27A /* SceneDelegate.swift in Sources */,
 				CCF53B7E2BA098E100935BDA /* AddPlanViewController.swift in Sources */,
 				CCF53B802BA09BC000935BDA /* AppData.swift in Sources */,

@@ -7,17 +7,18 @@
 
 import Foundation
 
-struct Race {
-    var name: String
+struct Race: Codable {
+    var name: String = ""
     var length: Float
-    var units: UnitLength
+    // Doesn't play well with encode/decode
+    //var units: UnitLength
     var splits: [Segment] = []
     
     var notes: String = ""
     
     init(length: Float, units: UnitLength) {
         self.length = length
-        self.units = units
+        //self.units = units
     }
     
     mutating func addSegment(_ segment: Segment) {
@@ -48,7 +49,7 @@ struct Race {
     }
 }
 
-struct Segment {
+struct Segment: Codable {
     var length: Float
     var time: TimeInterval
     var notes: String

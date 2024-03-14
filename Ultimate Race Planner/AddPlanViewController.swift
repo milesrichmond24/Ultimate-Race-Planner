@@ -25,6 +25,7 @@ class AddPlanViewController: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        AppData.saveData()
         delegate.planTable.reloadData()
     }
     
@@ -39,7 +40,6 @@ class AddPlanViewController: UIViewController {
         plan.notes = notes
         
         AppData.plans.append(plan)
-        print(AppData.plans.last)
     }
     
     @IBAction func updateTitle(_ sender: UITextField) {
