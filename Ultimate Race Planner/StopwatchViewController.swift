@@ -104,9 +104,23 @@ class StopwatchViewController: UIViewController, UITableViewDelegate, UITableVie
         let cell = tableView.dequeueReusableCell(withIdentifier: "split", for: indexPath) as! SplitCell
         
         cell.time.text = "\(getFormattedTime(splits[indexPath.row].0))"
-        cell.distanceRange.text = "\(splits[indexPath.row].1)"
-        let difference = splits[indexPath.row].1
-        cell.difference.text = "\(difference)"
+        
+        
+        if !(indexPath.row >= AppData.plans[selectedPlanIndex].splits.count) {
+            let difference = AppData.plans[selectedPlanIndex].splits[indexPath.row].time - splits[indexPath.row].0
+            cell.difference.text = "\(getFormattedTime(difference))"
+            
+            if(difference < 0) {
+                cell.difference.textColor = .systemRed
+            } else {
+                cell.difference.textColor = .systemRed
+            }
+            
+            cell.distanceRange.text = "\(AppData.plans[selectedPlanIndex].splits[indexPath.row].length) m"
+        } else {
+            cell.difference.text = ""
+            cell.distanceRange.text = "Split \(indexPath.row + 1)"
+        }
         
         return cell
     }

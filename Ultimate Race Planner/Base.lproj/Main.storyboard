@@ -420,19 +420,19 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="21"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68v-qB-roB">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="290" height="21"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="248.5" height="21"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWm-rW-v7r">
-                                                                    <rect key="frame" x="290" y="0.0" width="62" height="21"/>
+                                                                    <rect key="frame" x="248.5" y="0.0" width="82.5" height="21"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgy-FZ-yYN">
-                                                                    <rect key="frame" x="352" y="0.0" width="62" height="21"/>
+                                                                    <rect key="frame" x="331" y="0.0" width="83" height="21"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -440,7 +440,7 @@
                                                             </subviews>
                                                             <constraints>
                                                                 <constraint firstItem="kgy-FZ-yYN" firstAttribute="width" secondItem="FWm-rW-v7r" secondAttribute="width" id="Keu-Cb-A0G"/>
-                                                                <constraint firstItem="68v-qB-roB" firstAttribute="width" secondItem="rLP-lp-kTF" secondAttribute="width" multiplier="0.7" id="paF-2S-70l"/>
+                                                                <constraint firstItem="68v-qB-roB" firstAttribute="width" secondItem="rLP-lp-kTF" secondAttribute="width" multiplier="0.6" id="paF-2S-70l"/>
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
