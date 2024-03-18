@@ -386,7 +386,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdm-uN-TCn">
                                                 <rect key="frame" x="0.0" y="0.0" width="207" height="34.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Reset">
+                                                    <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="splitReset:" destination="9zA-5p-3zn" eventType="touchUpInside" id="8SH-rk-gA8"/>
                                                 </connections>
@@ -394,7 +396,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEa-Eh-X1d">
                                                 <rect key="frame" x="207" y="0.0" width="207" height="34.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="gray" title="Start">
+                                                    <color key="baseForegroundColor" systemColor="systemGreenColor"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="startStop:" destination="9zA-5p-3zn" eventType="touchUpInside" id="tMp-VG-beu"/>
                                                 </connections>
@@ -412,22 +416,32 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="rLP-lp-kTF">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLP-lp-kTF">
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="21"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68v-qB-roB">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="207" height="21"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="290" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWm-rW-v7r">
+                                                                    <rect key="frame" x="290" y="0.0" width="62" height="21"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgy-FZ-yYN">
-                                                                    <rect key="frame" x="207" y="0.0" width="207" height="21"/>
+                                                                    <rect key="frame" x="352" y="0.0" width="62" height="21"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="kgy-FZ-yYN" firstAttribute="width" secondItem="FWm-rW-v7r" secondAttribute="width" id="Keu-Cb-A0G"/>
+                                                                <constraint firstItem="68v-qB-roB" firstAttribute="width" secondItem="rLP-lp-kTF" secondAttribute="width" multiplier="0.7" id="paF-2S-70l"/>
+                                                            </constraints>
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
@@ -438,6 +452,7 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
+                                                    <outlet property="difference" destination="FWm-rW-v7r" id="jVB-xN-eKz"/>
                                                     <outlet property="distanceRange" destination="68v-qB-roB" id="Mue-0a-wPQ"/>
                                                     <outlet property="time" destination="kgy-FZ-yYN" id="g8N-z3-Edo"/>
                                                 </connections>
@@ -462,6 +477,8 @@
                     <navigationItem key="navigationItem" id="HfF-lH-8ya"/>
                     <connections>
                         <outlet property="clock" destination="aDT-Ax-087" id="H6X-Jy-sBV"/>
+                        <outlet property="planSelect" destination="qa3-h6-W1f" id="VJP-zz-f3h"/>
+                        <outlet property="resetLapButton" destination="rdm-uN-TCn" id="aOu-Km-fBS"/>
                         <outlet property="splitTable" destination="eGr-Hv-Qim" id="bRg-kA-mWo"/>
                     </connections>
                 </viewController>
@@ -499,6 +516,12 @@
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemFillColor">
             <color red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
