@@ -9,8 +9,9 @@ import UIKit
 
 class StopwatchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var clock: UILabel!
-    var clockValue: Double = 0.0 // Seconds
-    var splits: [(TimeInterval, Float)] = []
+    var clockValue: TimeInterval = 0.0
+    var splitValue: TimeInterval = 0.0
+    var splits: [(TimeInterval, TimeInterval)] = []
     var selectedPlanIndex: Int = 0
     
     @IBOutlet weak var resetLapButton: UIButton!
@@ -34,7 +35,12 @@ class StopwatchViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBAction func splitReset(_ sender: UIButton) {
         if stopwatchTimer != nil {
             let currentTime = clockValue
-            splits.append((currentTime, Float.nan))
+            if(splits.count == 0) {
+                splits.append((currentTime, currentTime))
+            } else {
+                splits.append((currentTime, splitValue))
+            }
+            splitValue = 0.0
             
             splitTable.reloadData()
             
@@ -64,7 +70,7 @@ class StopwatchViewController: UIViewController, UITableViewDelegate, UITableVie
         } else {
             stopwatchTimer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { (timer) in
                 self.clockValue += timer.timeInterval
-                
+                self.splitValue += timer.timeInterval
                 self.clock.text = self.getFormattedTime(self.clockValue)
             })
             
@@ -86,8 +92,6 @@ class StopwatchViewController: UIViewController, UITableViewDelegate, UITableVie
         return "\(minutes):\(seconds).\(milliseconds)"
     }
     
-    
-    
     //
     //
     //
@@ -104,19 +108,26 @@ class StopwatchViewController: UIViewController, UITableViewDelegate, UITableVie
         let cell = tableView.dequeueReusableCell(withIdentifier: "split", for: indexPath) as! SplitCell
         
         cell.time.text = "\(getFormattedTime(splits[indexPath.row].0))"
+        cell.splitTime.text = "\(getFormattedTime(splits[indexPath.row].1))"
         
+        if(planSelect.selectedRow(inComponent: 0) == AppData.plans.count) {
+            cell.distanceRange.text = "Split \(indexPath.row + 1)"
+            cell.difference.text = ""
+            return cell
+        }
         
         if !(indexPath.row >= AppData.plans[selectedPlanIndex].splits.count) {
             let difference = AppData.plans[selectedPlanIndex].splits[indexPath.row].time - splits[indexPath.row].0
-            cell.difference.text = "\(getFormattedTime(difference))"
             
             if(difference < 0) {
                 cell.difference.textColor = .systemRed
+                cell.difference.text = "+\(getFormattedTime(abs(difference)))"
             } else {
-                cell.difference.textColor = .systemRed
+                cell.difference.textColor = .systemGreen
+                cell.difference.text = "-\(getFormattedTime(abs(difference)))"
             }
             
-            cell.distanceRange.text = "\(AppData.plans[selectedPlanIndex].splits[indexPath.row].length) m"
+            cell.distanceRange.text = "Split \(indexPath.row + 1) : \(AppData.plans[selectedPlanIndex].splits[indexPath.row].length) m"
         } else {
             cell.difference.text = ""
             cell.distanceRange.text = "Split \(indexPath.row + 1)"
@@ -130,10 +141,14 @@ class StopwatchViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return AppData.plans.count
+        return AppData.plans.count + 1
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if(row == AppData.plans.count) {
+            return "No Plan"
+        }
+        
         return AppData.plans[row].name
     }
 

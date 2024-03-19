@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class SplitCell: UITableViewCell {
+    @IBOutlet weak var splitTime: UILabel!
     @IBOutlet weak var difference: UILabel!
     @IBOutlet weak var distanceRange: UILabel!
     @IBOutlet weak var time: UILabel!

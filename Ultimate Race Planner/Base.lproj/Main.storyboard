@@ -420,27 +420,34 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="21"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68v-qB-roB">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="248.5" height="21"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="165.5" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWm-rW-v7r">
-                                                                    <rect key="frame" x="248.5" y="0.0" width="82.5" height="21"/>
+                                                                    <rect key="frame" x="165.5" y="0.0" width="62" height="21"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00X-1i-7Uh">
+                                                                    <rect key="frame" x="227.5" y="0.0" width="93.5" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgy-FZ-yYN">
-                                                                    <rect key="frame" x="331" y="0.0" width="83" height="21"/>
+                                                                    <rect key="frame" x="321" y="0.0" width="93" height="21"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <constraints>
-                                                                <constraint firstItem="kgy-FZ-yYN" firstAttribute="width" secondItem="FWm-rW-v7r" secondAttribute="width" id="Keu-Cb-A0G"/>
-                                                                <constraint firstItem="68v-qB-roB" firstAttribute="width" secondItem="rLP-lp-kTF" secondAttribute="width" multiplier="0.6" id="paF-2S-70l"/>
+                                                                <constraint firstItem="00X-1i-7Uh" firstAttribute="width" secondItem="kgy-FZ-yYN" secondAttribute="width" id="2Gh-M6-3b3"/>
+                                                                <constraint firstItem="kgy-FZ-yYN" firstAttribute="width" secondItem="FWm-rW-v7r" secondAttribute="width" multiplier="1.5" id="Keu-Cb-A0G"/>
+                                                                <constraint firstItem="68v-qB-roB" firstAttribute="width" secondItem="rLP-lp-kTF" secondAttribute="width" multiplier="0.4" id="paF-2S-70l"/>
                                                             </constraints>
                                                         </stackView>
                                                     </subviews>
@@ -454,6 +461,7 @@
                                                 <connections>
                                                     <outlet property="difference" destination="FWm-rW-v7r" id="jVB-xN-eKz"/>
                                                     <outlet property="distanceRange" destination="68v-qB-roB" id="Mue-0a-wPQ"/>
+                                                    <outlet property="splitTime" destination="00X-1i-7Uh" id="BGn-6a-TbC"/>
                                                     <outlet property="time" destination="kgy-FZ-yYN" id="g8N-z3-Edo"/>
                                                 </connections>
                                             </tableViewCell>
@@ -511,6 +519,9 @@
     <resources>
         <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
