@@ -31,6 +31,22 @@ class StopwatchViewController: UIViewController, UITableViewDelegate, UITableVie
     func updateClock() {
         clock.text = "\(clockValue)"
     }
+    
+    func getFormattedTime(_ t: TimeInterval) -> String {
+        let minutes = Int(t) / 60 % 60
+        let seconds = Int(t) % 60
+        let milliseconds = Int(t * 100) % 100
+        
+        return "\(minutes):\(seconds).\(milliseconds)"
+    }
+    
+    //
+    //
+    //
+    // ---------------------------------------------------------------------------------------------
+    //
+    //
+    //
 
     @IBAction func splitReset(_ sender: UIButton) {
         if stopwatchTimer != nil {
@@ -84,14 +100,12 @@ class StopwatchViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
-    func getFormattedTime(_ t: TimeInterval) -> String {
-        let minutes = Int(t) / 60 % 60
-        let seconds = Int(t) % 60
-        let milliseconds = Int(t * 100) % 100
-        
-        return "\(minutes):\(seconds).\(milliseconds)"
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let target = segue.destination as? AddLogViewController {
+            target.plan = planSelect.selectedRow(inComponent: 0)
+            target.splits = self.splits
+        }
     }
-    
     //
     //
     //

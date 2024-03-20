@@ -20,6 +20,7 @@
 		CC1436652B96254E0039F27A /* Ultimate_Race_PlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1436642B96254E0039F27A /* Ultimate_Race_PlannerUITests.swift */; };
 		CC1436672B96254E0039F27A /* Ultimate_Race_PlannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1436662B96254E0039F27A /* Ultimate_Race_PlannerUITestsLaunchTests.swift */; };
 		CC1436742B9625B80039F27A /* race.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1436732B9625B80039F27A /* race.swift */; };
+		CC4761972BAB236900E64461 /* AddLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4761962BAB236900E64461 /* AddLogViewController.swift */; };
 		CCF53B7E2BA098E100935BDA /* AddPlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF53B7D2BA098E100935BDA /* AddPlanViewController.swift */; };
 		CCF53B802BA09BC000935BDA /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF53B7F2BA09BC000935BDA /* AppData.swift */; };
 		CCF53B842BA09E4200935BDA /* planCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF53B832BA09E4200935BDA /* planCell.swift */; };
@@ -61,6 +62,7 @@
 		CC1436642B96254E0039F27A /* Ultimate_Race_PlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ultimate_Race_PlannerUITests.swift; sourceTree = "<group>"; };
 		CC1436662B96254E0039F27A /* Ultimate_Race_PlannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ultimate_Race_PlannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CC1436732B9625B80039F27A /* race.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = race.swift; sourceTree = "<group>"; };
+		CC4761962BAB236900E64461 /* AddLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLogViewController.swift; sourceTree = "<group>"; };
 		CCF53B7D2BA098E100935BDA /* AddPlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlanViewController.swift; sourceTree = "<group>"; };
 		CCF53B7F2BA09BC000935BDA /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		CCF53B832BA09E4200935BDA /* planCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = planCell.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				CCFD6F892BA3416F008F28D8 /* StopwatchViewController.swift */,
+				CC4761962BAB236900E64461 /* AddLogViewController.swift */,
 				CC1436402B96254C0039F27A /* AppDelegate.swift */,
 				CC1436422B96254C0039F27A /* SceneDelegate.swift */,
 				CC1436442B96254C0039F27A /* HomeViewController.swift */,
@@ -289,6 +292,7 @@
 				B195DF0D2BA27801001CB8DF /* SplitCell.swift in Sources */,
 				CCF53B842BA09E4200935BDA /* planCell.swift in Sources */,
 				B195DF0B2BA27686001CB8DF /* ViewPlanViewController.swift in Sources */,
+				CC4761972BAB236900E64461 /* AddLogViewController.swift in Sources */,
 				CC1436432B96254C0039F27A /* SceneDelegate.swift in Sources */,
 				CCF53B7E2BA098E100935BDA /* AddPlanViewController.swift in Sources */,
 				CCF53B802BA09BC000935BDA /* AppData.swift in Sources */,
