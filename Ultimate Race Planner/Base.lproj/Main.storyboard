@@ -274,6 +274,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Cancel">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="17"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="bOk-Nc-Ocg" kind="unwind" unwindAction="returningWithUnwindSegue:" id="oKm-j8-h6I"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Plan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlz-je-c0A">
                                         <rect key="frame" x="138" y="0.0" width="138" height="66.5"/>
@@ -290,6 +293,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="addPlan:" destination="7jz-sx-430" eventType="touchUpInside" id="j3E-5G-SF5"/>
+                                            <segue destination="bOk-Nc-Ocg" kind="unwind" unwindAction="returningWithUnwindSegue:" id="5dV-fU-OQV"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -357,6 +361,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mu3-b9-782" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="bOk-Nc-Ocg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1783" y="-595"/>
         </scene>
@@ -520,7 +525,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vik-5O-f1v">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log Race" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vik-5O-f1v">
                                         <rect key="frame" x="138" y="0.0" width="138" height="88.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -533,17 +538,36 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n9T-dc-8Le" userLabel="Main">
-                                <rect key="frame" x="10" y="97" width="394" height="790"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="n9T-dc-8Le" userLabel="Main">
+                                <rect key="frame" x="10" y="97" width="394" height="443"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tj0-UG-XfX">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="147.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0J9-TU-gQz">
+                                        <rect key="frame" x="0.0" y="147.5" width="394" height="148"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9kX-gU-Nnl">
+                                        <rect key="frame" x="0.0" y="295.5" width="394" height="147.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3QO-gu-4hJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="n9T-dc-8Le" firstAttribute="leading" secondItem="3QO-gu-4hJ" secondAttribute="leading" constant="10" id="Eb2-fq-2WB"/>
                             <constraint firstItem="yNB-YH-C6w" firstAttribute="width" secondItem="3QO-gu-4hJ" secondAttribute="width" id="SmO-EH-GaU"/>
                             <constraint firstItem="yNB-YH-C6w" firstAttribute="height" secondItem="3QO-gu-4hJ" secondAttribute="height" multiplier="0.1" id="V68-5N-qs7"/>
+                            <constraint firstItem="n9T-dc-8Le" firstAttribute="trailing" secondItem="3QO-gu-4hJ" secondAttribute="trailing" constant="-10" id="bFD-ae-h18"/>
                             <constraint firstItem="yNB-YH-C6w" firstAttribute="top" secondItem="3QO-gu-4hJ" secondAttribute="top" id="iKE-ED-ZxZ"/>
-                            <constraint firstItem="n9T-dc-8Le" firstAttribute="height" secondItem="3QO-gu-4hJ" secondAttribute="height" multiplier="0.9" id="xdQ-7P-i0L"/>
+                            <constraint firstItem="n9T-dc-8Le" firstAttribute="height" secondItem="3QO-gu-4hJ" secondAttribute="height" multiplier="0.5" id="xdQ-7P-i0L"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5ag-FD-him"/>

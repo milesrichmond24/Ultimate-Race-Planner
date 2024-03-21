@@ -68,12 +68,18 @@ class AddPlanViewController: UIViewController {
                 if isDistValid {
                     addButton.tintColor = .link
                     isValid = true
+                    addButton.isEnabled = true
                     return
                 }
             }
         }
         
+        addButton.isEnabled = false
         addButton.tintColor = .systemGray
         isValid = false
+    }
+    
+    @IBAction func returning(unwindSegue: UIStoryboardSegue) {
+        delegate.planTable.reloadData()
     }
 }

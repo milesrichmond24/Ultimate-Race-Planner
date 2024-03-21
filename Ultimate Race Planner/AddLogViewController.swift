@@ -8,8 +8,8 @@
 import UIKit
 
 class AddLogViewController: UIViewController {
-    var plan: UInt // Yay unsigned ints exist
-    var splits: [(TimeInterval, TimeInterval)]
+    var plan: Int = 0 
+    var splits: [(TimeInterval, TimeInterval)] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,16 +20,5 @@ class AddLogViewController: UIViewController {
             
         }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
