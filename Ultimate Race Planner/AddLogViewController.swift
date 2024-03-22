@@ -7,8 +7,8 @@
 
 import UIKit
 
-class AddLogViewController: UIViewController {
-    var plan: Int = 0 
+class AddLogViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var plan: Int = 0
     var splits: [(TimeInterval, TimeInterval)] = []
 
     override func viewDidLoad() {
@@ -20,5 +20,17 @@ class AddLogViewController: UIViewController {
             
         }
     }
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "split", for: indexPath) as? SplitCell
+        
+        if(plan < AppData.plans.count) {
+            cell.distanceRange = "\(AppData.plans[plan].length) m"
+        }
+        cell?.time
+    }
 }
